@@ -16,5 +16,4 @@ class ApplicationController < ActionController::Base
       'customer'
     end
   end
-  
 end
