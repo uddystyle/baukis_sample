@@ -25,14 +25,12 @@ group :test do
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
   gem 'capybara', '~> 2.13'
-  gem 'factory_girl_rails', '~> 4.4.1'
+  gem 'factory_girl', '~> 4.8.0'
+  gem 'database_cleaner', '~> 1.5.3'
 end
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'factory_girl_rails', '~> 4.4.1'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
 end
 
@@ -41,6 +39,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'better_errors', '~> 2.1', '>= 2.1.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
