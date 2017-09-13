@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'ルーティング' do
-  example '職員トップページ' do
+  specify '職員トップページ' do
     expect(get: 'http://baukis.example.com').to route_to(
                                                     host: 'baukis.example.com',
                                                     controller: 'staff/top',
@@ -9,7 +9,7 @@ describe 'ルーティング' do
                                                 )
   end
 
-  example '管理者ログインフォーム' do
+  specify '管理者ログインフォーム' do
     expect(get: 'http://baukis.example.com/admin/login').to route_to(
                                                                 host: 'baukis.example.com',
                                                                 controller: 'admin/sessions',
@@ -17,14 +17,22 @@ describe 'ルーティング' do
                                                             )
   end
 
-  example 'ホスト名が対象外ならerrors/not_foundへ' do
+  specify '利用者トップページ' do
+    expect(get: 'http://example.com').to route_to(
+                                             host: 'example.com',
+                                             controller: 'customer/top',
+                                             action: 'index'
+                                         )
+  end
+
+  specify 'ホスト名が対象外ならerrors/not_foundへ' do
     expect(get: 'http://foo.example.jp').to route_to(
                                                 controller: 'errors',
                                                 action: 'routing_error'
                                             )
   end
 
-  example '存在しないパスならerrors/not_foundへ' do
+  specify '存在しないパスならerrors/not_foundへ' do
     expect(get: 'http://baukis.example.com/xyz').to route_to(
                                                         controller: 'errors',
                                                         action: 'routing_error',
