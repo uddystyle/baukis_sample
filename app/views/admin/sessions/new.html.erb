@@ -4,15 +4,15 @@
   <h1><%= @title %></h1>
 
   <%= form_for @form, url: :admin_session do |f| %>
-      <div>
+      <div class="email-form">
         <%= f.label :email, 'メールアドレス' %>
         <%= f.text_field :email %>
       </div>
-      <div>
+      <div class="password-form">
         <%= f.label :password, 'パスワード' %>
         <%= f.password_field :password %>
       </div>
-      <div>
+      <div class="submit-form">
         <%= f.submit 'ログイン' %>
       </div>
   <% end %>
