@@ -4,12 +4,12 @@ describe Admin::StaffMembersController do
   let(:params_hash) { attributes_for(:staff_member)}
 
   describe '#create' do
-    specify '職員一覧ページにリダイレクト' do
+    example '職員一覧ページにリダイレクト' do
       post :create, staff_member: params_hash
       expect(response).to redirect_to(admin_staff_members_url)
     end
 
-    specify '例外ActionController::ParameterMissingが発生' do
+    example '例外ActionController::ParameterMissingが発生' do
       bypass_rescue
       expect { post :create }.to raise_error(ActionController::ParameterMissing)
     end

@@ -1,5 +1,6 @@
 class Staff::Base < ApplicationController
   private
+
   def current_staff_member
     if session[:staff_member_id]
       @current_staff_member ||=
