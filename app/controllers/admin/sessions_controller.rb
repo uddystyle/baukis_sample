@@ -29,14 +29,6 @@ class Admin::SessionsController < Admin::Base
       render action: 'new'
     end
   end
-  #     session[:admin_id] = admin.id
-  #     flash.notice = 'ログイン成功'
-  #     redirect_to :admin_root
-  #   else
-  #     admin.suspended ? flash.now.alert = 'アカウントが停止されています。' : flash.now.alert = 'メールアドレスまたはパスワードが正しくありません。'
-  #     render action: 'new'
-  #   end
-  # end
 
   def destroy
     session.delete(:admin_id)
