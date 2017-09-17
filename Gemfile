@@ -22,6 +22,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'nokogiri', '~> 1.8.0'
 gem 'rails-i18n'
 gem 'kaminari'
+gem 'date_validator'
+gem 'email_validator'
 group :test do
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
