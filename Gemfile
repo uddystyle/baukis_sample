@@ -20,7 +20,8 @@ gem 'spring'
 gem 'therubyracer', platforms: :ruby
 gem 'bcrypt', '~> 3.1.7'
 gem 'nokogiri', '~> 1.8.0'
-gem 'rails-i18n', '~> 4.0.1'
+gem 'rails-i18n'
+gem 'kaminari'
 group :test do
   gem 'rspec-rails'
   gem 'spring-commands-rspec'

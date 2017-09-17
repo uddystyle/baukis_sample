@@ -22,7 +22,7 @@ class Admin::SessionsController < Admin::Base
         session[:admin_id] = admin.id
         session[:last_access_time] = Time.current
         flash.notice = 'ログインしました。'
-        redirect_to :staff_root
+        redirect_to :admin_root
       end
     else
       flash.now.alert = 'メールアドレスまたはパスワードが正しくありません。'

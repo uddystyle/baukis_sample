@@ -3,6 +3,7 @@ class Staff::TopController < Staff::Base
 
   def index
     render action: 'index'
+    @staff_members = @staff_members.page(params[:page])
   end
 
 end
